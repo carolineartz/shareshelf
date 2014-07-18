@@ -4,13 +4,13 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '983145cbdacd864c377d455a8cb27c611b0dae467a88d59e214b5d331667234c9684fa3624d89386966ef3f8d4209ec0c0b3b0c3634d1ed74429cf65b6e467c2'
+  # config.secret_key = 'c8053e62cdc6c926c9b7a2e18f78f756df458b73d4b8761e0c502796bcc66a2cbeb221fd862d2eee1860776f4bb7ff3e118334fefc8ab94b76fc7062e5174720'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'no-reply@' + Rails.application.secrets.domain_name
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'e55de54e0a2119ee23c92e287184d7ded80a6974582e6aa39d7550ef20fc56858c453969d051991380599752aa5e1f69dad59680405a95f98ddc73386dfb5f36'
+  # config.pepper = '75b475acc9c88d558af365c9465f8f64ec6704956264ce9f8515934d5c08660554da488181106d7b9982a7a3eaaee10916ad71774b7954cb2eb046909eb93b70'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -202,11 +202,11 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
-  # config.default_scope = :user
+  config.default_scope = :user
 
   # Set this configuration to false if you want /users/sign_out to sign out
   # only the current scope. By default, Devise signs out all scopes.

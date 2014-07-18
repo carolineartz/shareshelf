@@ -1,0 +1,19 @@
+- if user_signed_in?
+  %a.item
+    %i.home.icon
+      = link_to 'Edit account', edit_user_registration_path
+  %a.item
+    Logout
+    = link_to 'Sign out', destroy_user_session_path, :method=>'delete'
+- else
+  %a.item
+    Sign In
+    = link_to 'Sign in', new_user_session_path
+  %a.item
+    Sign Up
+    = link_to 'Sign up', new_user_registration_path
+- if user_signed_in?
+  - if current_user.admin?
+    %a.item
+      %i.users.icon
+        = link_to 'Users', users_path

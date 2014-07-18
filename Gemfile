@@ -9,14 +9,15 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
-gem 'compass-rails', '~> 1.1.2'
+gem 'compass-rails'
 gem 'devise'
 gem 'haml-rails'
 gem 'pg'
 gem 'pundit'
 gem 'simple_form'
 gem 'thin'
-gem 'zurb-foundation', '~> 4.3.2'
+# gem 'zurb-foundation', '~> 4.3.2'
+gem 'semantic-ui-sass', '~> 0.16.1.0'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -30,6 +31,7 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
+  gem 'nifty-generators'
 end
 group :development, :test do
   gem 'factory_girl_rails'
